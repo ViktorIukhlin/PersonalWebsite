@@ -1,0 +1,146 @@
+---
+import { profile } from '../data/profile';
+---
+
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="section-title">Skills & Tools</h2>
+
+    <div class="skills-grid">
+      <div class="skills-column">
+        <div class="skill-category">
+          <h4>Main Technologies</h4>
+          <ul class="skill-list">
+            {profile.skills.main.slice(0, 6).map((skill) => (
+              <li><span class="skill-dot"></span>{skill}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h4>Testing</h4>
+          <ul class="skill-list">
+            {profile.skills.testing.map((skill) => (
+              <li><span class="skill-dot"></span>{skill}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div class="skills-column">
+        <div class="skill-category">
+          <h4>Cross-Platform</h4>
+          <ul class="skill-list">
+            {profile.skills.crossPlatform.slice(0, 4).map((skill) => (
+              <li><span class="skill-dot"></span>{skill}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h4>Libraries & Frameworks</h4>
+          <ul class="skill-list">
+            {profile.skills.libraries.slice(0, 4).map((skill) => (
+              <li><span class="skill-dot"></span>{skill}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="languages-section">
+      <h3>LANGUAGES</h3>
+      <div class="languages-list">
+        {profile.languages.map((lang) => (
+          <div class="language-item">
+            <span class="language-name">{lang}</span>
+            <div class="language-bar">
+              <div class="language-progress"></div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    padding: 5rem 0;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .skill-category {
+    margin-bottom: 2rem;
+  }
+
+  .skill-category h4 {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .skill-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--color-accent);
+    border-radius: 50%;
+  }
+
+  .languages-section h3 {
+    color: var(--color-accent);
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .languages-list {
+    max-width: 400px;
+  }
+
+  .language-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .language-name {
+    min-width: 80px;
+  }
+
+  .language-bar {
+    flex: 1;
+    height: 4px;
+    background: var(--color-border);
+    border-radius: 2px;
+  }
+
+  .language-progress {
+    height: 100%;
+    width: 90%;
+    background: var(--color-accent);
+    border-radius: 2px;
+  }
+
+  @media (max-width: 768px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

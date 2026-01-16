@@ -1,0 +1,59 @@
+---
+import { profile } from '../data/profile';
+---
+
+<section id="summary" class="section">
+  <div class="container">
+    <h2 class="section-title">Summary</h2>
+
+    <div class="summary-content">
+      <p>{profile.summary}</p>
+
+      <p>
+        I have collaborated with diverse teams, including developers, designers, and product managers,
+        to bring complex projects to life. My approach centers on writing clean, maintainable code
+        while ensuring optimal performance and user experience.
+      </p>
+
+      <blockquote>
+        Driven by a curiosity to learn and improve, I continuously explore new tools and
+        methodologies to enhance my work. Whether working on web applications, mobile interfaces,
+        or complex integrations, I am committed to delivering high-quality results that make a
+        difference for users and businesses alike.
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    padding: 5rem 0;
+  }
+
+  .summary-content {
+    max-width: 600px;
+  }
+
+  .summary-content p {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .summary-content blockquote {
+    border-left: 3px solid var(--color-accent);
+    padding-left: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--color-text);
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .summary-content blockquote {
+      font-size: 1.25rem;
+    }
+  }
+</style>

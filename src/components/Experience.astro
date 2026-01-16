@@ -1,0 +1,101 @@
+---
+import { profile } from '../data/profile';
+---
+
+<section id="experience" class="section">
+  <div class="container">
+    <h2 class="section-title">Work Experience</h2>
+
+    <div class="timeline">
+      {profile.experience.map((job) => (
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="job-header">
+              <h3 class="job-role">{job.role.toUpperCase()}</h3>
+              <span class="job-period">{job.period}</span>
+            </div>
+            <p class="job-company">{job.company}</p>
+
+            <ul class="job-highlights">
+              {job.highlights.map((highlight) => (
+                <li>— {highlight}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    padding: 5rem 0;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--color-border);
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-bottom: 3rem;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -2rem;
+    top: 0.25rem;
+    width: 12px;
+    height: 12px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    transform: translateX(-3px);
+  }
+
+  .job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .job-role {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .job-period {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+  }
+
+  .job-company {
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+  }
+
+  .job-highlights {
+    max-width: 500px;
+  }
+
+  .job-highlights li {
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+</style>
