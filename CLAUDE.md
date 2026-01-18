@@ -5,7 +5,7 @@ This file provides guidance to Claude Code when working with this repository.
 ## Commands
 
 ```sh
-npm run dev      # Start dev server at localhost:4321/PersonalWebSite
+npm run dev      # Start dev server at localhost:4321/PersonalWebsite
 npm run build    # Build for production to ./dist/
 npm run preview  # Preview production build locally
 ```
@@ -56,4 +56,4 @@ src/
 
 GitHub Actions auto-deploys to GitHub Pages on push to `main`.
 
-**Live:** https://viktoriukhlin.github.io/PersonalWebSite/
+**Live:** https://viktoriukhlin.github.io/PersonalWebsite/

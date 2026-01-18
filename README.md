@@ -2,7 +2,7 @@
 
 Viktor Iukhlin's portfolio website built with [Astro](https://astro.build).
 
-**Live:** https://viktoriukhlin.github.io/PersonalWebSite/
+**Live:** https://viktoriukhlin.github.io/PersonalWebsite/
 
 ## Development
 
