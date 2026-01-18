@@ -190,7 +190,22 @@ import { profile } from '../data/profile';
     function checkBlur() {
       const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
       const scrollCenter = scrollY + windowHeight / 2;
+
+      // Check if at bottom of page (Links section)
+      const isAtBottom = scrollY + windowHeight >= documentHeight - 150;
+
+      // Check if Links section is visible
+      const linksSection = document.getElementById('links');
+      const isLinksVisible = linksSection &&
+        scrollY + windowHeight > linksSection.offsetTop + 100;
+
+      // If at bottom or Links is visible, remove blur
+      if (isAtBottom || isLinksVisible) {
+        blur?.classList.remove('active');
+        return;
+      }
 
       let shouldBlur = false;
 
