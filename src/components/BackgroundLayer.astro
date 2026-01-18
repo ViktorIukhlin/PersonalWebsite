@@ -129,9 +129,26 @@ import { profile } from '../data/profile';
 
   @media (max-width: 1024px) {
     .background-photo {
-      right: 50%;
-      top: 30%;
-      transform: translate(50%, -50%);
+      right: 5%;
+      top: 40%;
+      transform: translateY(-50%);
+    }
+
+    .photo-frame {
+      width: 320px;
+      height: 320px;
+    }
+
+    .photo-glow {
+      width: 380px;
+      height: 380px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .background-photo {
+      right: -10%;
+      top: 35%;
     }
 
     .photo-frame {
@@ -145,15 +162,20 @@ import { profile } from '../data/profile';
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
+    .background-photo {
+      right: -20%;
+      top: 30%;
+    }
+
     .photo-frame {
-      width: 220px;
-      height: 220px;
+      width: 240px;
+      height: 240px;
     }
 
     .photo-glow {
-      width: 260px;
-      height: 260px;
+      width: 280px;
+      height: 280px;
     }
   }
 </style>
