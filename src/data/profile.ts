@@ -2,6 +2,7 @@ export const profile = {
   name: "Viktor Iukhlin",
   title: "Senior Frontend Engineer",
   location: "Tallinn, Estonia",
+  heroImage: "hero-photo.webp",
   email: "iukhlin.v@gmail.com",
   phone: "+372 58342615",
   github: "https://github.com/ViktorIukhlin",
