@@ -121,8 +121,8 @@ import ThemeToggle from './ThemeToggle.astro';
   }
 
   .btn-icon svg {
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
   }
 
   .btn-text {
@@ -140,6 +140,16 @@ import ThemeToggle from './ThemeToggle.astro';
   .btn-download:hover .btn-text {
     transform: translateY(150%);
     opacity: 0;
+  }
+
+  :global([data-theme="light"]) .btn-download {
+    background: #4a9fd4;
+    color: #fff;
+  }
+
+  :global([data-theme="light"]) .btn-download:hover {
+    background: #fff;
+    color: #000;
   }
 
   .hero-main {
